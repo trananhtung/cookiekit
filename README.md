@@ -3,10 +3,10 @@
 > Tiny, type-safe **HTTP cookie** parse & serialize — RFC 6265 with `SameSite`, `Partitioned`, and `Priority`. **Zero dependencies**.
 
 [![CI](https://github.com/trananhtung/cookiekit/actions/workflows/ci.yml/badge.svg)](https://github.com/trananhtung/cookiekit/actions/workflows/ci.yml)
-[![npm version](https://img.shields.io/npm/v/cookiekit.svg)](https://www.npmjs.com/package/cookiekit)
-[![bundle size](https://img.shields.io/bundlephobia/minzip/cookiekit)](https://bundlephobia.com/package/cookiekit)
-[![types](https://img.shields.io/npm/types/cookiekit.svg)](https://www.npmjs.com/package/cookiekit)
-[![license](https://img.shields.io/npm/l/cookiekit.svg)](./LICENSE)
+[![npm version](https://img.shields.io/npm/v/@billdaddy/cookiekit.svg)](https://www.npmjs.com/package/@billdaddy/cookiekit)
+[![bundle size](https://img.shields.io/bundlephobia/minzip/@billdaddy/cookiekit)](https://bundlephobia.com/package/@billdaddy/cookiekit)
+[![types](https://img.shields.io/npm/types/@billdaddy/cookiekit.svg)](https://www.npmjs.com/package/@billdaddy/cookiekit)
+[![license](https://img.shields.io/npm/l/@billdaddy/cookiekit.svg)](./LICENSE)
 
 Reading a `Cookie` header and building a `Set-Cookie` is the kind of thing you
 should never hand-roll — the encoding and attribute rules are fiddly and a
@@ -15,7 +15,7 @@ names and values, and supports the modern attributes (`SameSite`, `Partitioned`,
 `Priority`). **Zero dependencies**, isomorphic.
 
 ```ts
-import { parse, serialize } from "cookiekit";
+import { parse, serialize } from "@billdaddy/cookiekit";
 
 parse("sid=abc; theme=dark");
 // { sid: "abc", theme: "dark" }
@@ -39,14 +39,14 @@ serialize("sid", "abc", { httpOnly: true, secure: true, sameSite: "lax", maxAge:
 ## Install
 
 ```bash
-npm install cookiekit
-# or: pnpm add cookiekit  /  yarn add cookiekit  /  bun add cookiekit
+npm install @billdaddy/cookiekit
+# or: pnpm add @billdaddy/cookiekit  /  yarn add @billdaddy/cookiekit  /  bun add @billdaddy/cookiekit
 ```
 
 ## `parse(header, options?)`
 
 ```ts
-import { parse } from "cookiekit";
+import { parse } from "@billdaddy/cookiekit";
 
 parse("a=1; b=hello%20world");  // { a: "1", b: "hello world" }
 parse('id="42"; theme=dark');   // { id: "42", theme: "dark" }
@@ -63,7 +63,7 @@ malformed input).
 ## `serialize(name, value, options?)`
 
 ```ts
-import { serialize } from "cookiekit";
+import { serialize } from "@billdaddy/cookiekit";
 
 serialize("sid", "abc", {
   maxAge: 60 * 60,        // Max-Age (integer seconds)
