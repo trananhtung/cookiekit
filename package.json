@@ -1,6 +1,6 @@
 {
   "name": "@billdaddy/cookiekit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Tiny, type-safe HTTP cookie parse and serialize — RFC 6265 with SameSite, Partitioned, and Priority. Zero dependencies.",
   "keywords": [
     "cookie",
